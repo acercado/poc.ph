@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-9 col-sm-9 col-xs-12 result-container">
+        <h1 class="result-title"><?php echo $title; ?></h1>
+        <h4 class="result-content"><?php echo $content; ?></h4>
+    </div>
+    <div class="col-md-3 col-sm-3 hidden-xs result-banner-container">
+		<img src="<?php echo $this->url->get('assets/img/badge-hero.png'); ?>" />
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+	    <ul class="nav nav-tabs result-tabs" role="tablist">
+	      <li class="active" style="margin-right: 2px;"><a href="#result" role="tab" data-toggle="tab"><?php echo $lang->_("creditcard_0"); ?></a></li>
+	      <li style="margin: 0px 2px;"><a href="#faq" role="faq" data-toggle="tab"><?php echo $lang->_("creditcard_1"); ?></a></li>
+	      <li style="margin-left: 2px;"><a href="#askus" role="tab" data-toggle="tab"><?php echo $lang->_("creditcard_2"); ?></a></li>
+
+	      <li class="result-count"><span class="hidden-xs"><?php echo $lang->_("common_0", array("count" => '<num>'.count($products).'</num>', 'name' => 'cards', 'total' => '100')); ?></span><span class="visible-xs"><num><?php echo count($products); ?></num></span></li>
+	    </ul>
+	    <div class="tab-content">
+	      <div class="tab-pane active" id="result">
+	      	<div class="row">
+		      	<?php $this->partial("Partials/filter") ?>
+		      	<?php $this->partial("Partials/main") ?>
+	      	</div>
+	      </div>
+	      <div class="tab-pane" id="faq">
+	      	<p class="justify"><?php echo $lang->_("creditcard_1"); ?></p>
+	      </div>
+	      <div class="tab-pane" id="askus">
+	      	<p class="justify"><?php echo $lang->_("creditcard_2"); ?></p>
+	      </div>
+	    </div>
+	</div>
+</div>
+
+
+
+
+
+
+
+

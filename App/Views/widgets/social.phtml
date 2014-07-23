@@ -1,0 +1,28 @@
+<?php 
+$url = $this->config->project->cms_url . 'widgets/social';
+$cms = json_decode(file_get_contents($url));
+$cms = $cms->data;
+?>
+
+<div class="well side-facebook-container hidden-xs">
+	<?php if(!empty($this->config->project->social->facebook)){ ?>
+		<div class="fb-like-box" data-href="https://www.facebook.com/<?php echo $this->config->project->social->facebook; ?>" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+	<?php } ?>
+</div>
+
+<div class="side-social-container well hidden-xs">
+	<p><?php echo $cms->caption; ?></p>
+	<div class="row">
+		<div class="col-md-4 col-sm-4 padding-0 ">
+			<?php if(!empty($this->config->project->social->twitter)){ ?>
+    			<a href="https://twitter.com/share" class="twitter-share-button" data-lang="<?php echo $this->registry->language->code; ?>" data-count="vertical" data-via="<?php echo $this->config->project->social->twitter; ?>">Tweet</a>
+    		<?php } ?>
+    	</div>
+		<div class="col-md-4 col-sm-4 padding-0 " style="padding: 0px 10px !important;">
+    		<div class="fb-share-button" data-href="<?php echo $this->url->get(ltrim($this->request->getURI(), '/')); ?>" data-type="box_count"></div>
+    	</div>
+    	<div class="col-md-4 col-sm-4 padding-0 ">
+    		<div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60"></div>
+    	</div>
+	</div>
+</div>

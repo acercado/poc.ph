@@ -1,0 +1,64 @@
+<section class="upper_navigation">
+    <div class="container sec_grp">
+        <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="<?php echo $this->url->get(); ?>"><img src="<?php echo $this->url->get('assets/img/moneymax-logo.png'); ?>" alt="MoneyMax"></a>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse row">
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+                        <ul class="nav navbar-nav">
+                            <?php foreach ($mainMenu as $value) { ?>
+                                <li class="dropdown <?php if(!empty($value['nav_name'])){if(isset($this->registry->page_name) && $this->registry->page_name == $value['nav_name']){echo 'active-nav';}} ?>">
+                                    <?php echo $this->tag->linkTo( array(array('for' => $value['for'] ), $value['name'], 'onClick' => '_gaq.push(["_trackEvent", "Links", "Click", "Nav '.$value['name'].'"]);', 'data-toggle'=>'dropdown', 'class'=>'dropdown-toggle main-menu' )); ?>
+
+                                    <?php if(!empty($value['submenu'])){ ?>
+                                        <ul class="dropdown-menu">
+                                            <?php foreach ($value['submenu'] as $val) { ?>
+                                                <li><?php echo $this->tag->linkTo( array(array('for' => $val['for'], 'params' => $val['params']), $val['name'], 'onClick' => '_gaq.push(["_trackEvent", "Links", "Click", "Nav '.$val['name'].'"]);' )); ?></li>    
+                                            <?php } ?>
+                                        </ul>
+                                    <?php } ?>
+
+                                </li>
+                            <?php } ?>
+                            <li class="dropdown <?php if(isset($this->registry->page_name) && $this->registry->page_name == 'learningcenter'){echo 'active-nav';} ?>">
+                                <?php echo $this->tag->linkTo( array(array('for' => $this->registry->language->code.':learningcenter' ), $lang->_("menu_0"), 'onClick' => '_gaq.push(["_trackEvent", "Links", "Click", "Nav Learning Center"]);', 'data-toggle'=>'dropdown', 'class'=>'dropdown-toggle main-menu' )); ?>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 hidden-sm hidden-xs">
+                        <ul class="nav nav-pills social-holder">
+                          <li><a href="javascript:viod(0);"><i class="fa fa-google-plus"></i></a></li>
+                          <li><a href="javascript:viod(0);"><i class="fa fa-linkedin"></i></a></li>
+                          <li><a href="javascript:viod(0);"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="javascript:viod(0);"><i class="fa fa-facebook"></i></a></li>
+
+                          <li><a href="javascript:viod(0);"><img src="<?php echo $this->url->get('assets/img/phil-flag.png'); ?>"/> <?php echo $this->config->project->people; ?></a></li>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+    </div>
+</section>
+
+<section class="breadcrumbs_holder">
+    <div class="container sec_grp">
+        <div class="row">
+            <div class="col-md-9 col-sm-12 col-xs-12">
+                <ul class="breadcrumb">
+                    <?php $this->registry->breadcrumbs->render(); ?>
+                </ul>
+            </div>
+            <div class="col-md-3 hidden-sm hidden-xs" style="text-align: right;padding-top: 5px;">
+                <div class="fb-like" data-href="https://www.facebook.com/<?php echo $this->config->project->social->facebook; ?>" data-width="220" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+            </div>
+        </div>
+    </div>
+</section>
+

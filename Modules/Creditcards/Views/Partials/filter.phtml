@@ -1,0 +1,185 @@
+<div class="col-md-3 col-sm-3 col-xs-12">
+    <div class="panel panel-default result-head">
+      <div class="panel-body">
+        <?php echo $lang->_("common_2"); ?> 
+      </div>
+    </div>
+
+    <div class="panel-group result-filter" id="accordion">
+	  <div class="panel panel-default">
+	    <div class="panel-heading result-head">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#cardtype">
+	          <span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;<?php echo $lang->_("creditcard_8"); ?>
+	        </a>
+	    </div>
+	    <div id="cardtype" class="panel-collapse collapse in">
+	      <div class="panel-body">
+	        <div class="default-text center-text">
+	        	<p><?php echo $lang->_("creditcard_12"); ?></p>
+	        </div>
+	        <div class="row center-text">
+                <div class="col-md-6 col-sm-6 col-xs-3 filter-type">
+                	<a href="" class="cashback"><span class="nodisplay"><?php echo $lang->_("creditcard_13"); ?></span></a>
+                    <span class="center-text hidden-sm hidden-xs"><?php echo $lang->_("creditcard_13"); ?></span>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-3 filter-type">
+                    <a href="" class="rewards"><span class="nodisplay"><?php echo $lang->_("creditcard_14"); ?></span></a>
+                    <span class="center-text hidden-sm hidden-xs"><?php echo $lang->_("creditcard_14"); ?></span>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-3 filter-type">
+                    <a href="" class="shopping"><span class="nodisplay"><?php echo $lang->_("creditcard_29"); ?></span></a>
+                    <span class="center-text hidden-sm hidden-xs"><?php echo $lang->_("creditcard_29"); ?></span>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-3 filter-type">
+                    <a href="" class="dining"><span class="nodisplay"><?php echo $lang->_("creditcard_30"); ?></span></a>
+                    <span class="center-text hidden-sm hidden-xs"><?php echo $lang->_("creditcard_30"); ?></span>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-3 filter-type">
+                    <a href="" class="groceries"><span class="nodisplay"><?php echo $lang->_("creditcard_31"); ?></span></a>
+                    <span class="center-text hidden-sm hidden-xs"><?php echo $lang->_("creditcard_31"); ?></span>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-3 filter-type">
+                    <a href="" class="travel"><span class="nodisplay"><?php echo $lang->_("creditcard_32"); ?></span></a>
+                    <span class="center-text hidden-sm hidden-xs"><?php echo $lang->_("creditcard_32"); ?></span>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-3 filter-type">
+                    <a href="" class="lowinterest"><span class="nodisplay"><?php echo $lang->_("creditcard_33"); ?></span></a>
+                    <span class="center-text hidden-sm hidden-xs"><?php echo $lang->_("creditcard_33"); ?></span>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-3 filter-type">
+                    <a href="" class="noannualfee"><span class="nodisplay"><?php echo $lang->_("creditcard_34"); ?></span></a>
+                    <span class="center-text hidden-sm hidden-xs"><?php echo $lang->_("creditcard_34"); ?></span>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-3 filter-type">
+                    <a href="" class="lowbalancetransfer"><span class="nodisplay"><?php echo $lang->_("creditcard_35"); ?></span></a>
+                    <span class="center-text hidden-sm hidden-xs"><?php echo $lang->_("creditcard_35"); ?></span>
+                </div>
+            </div>
+            <div class="default-text" style="margin-top: 10px;">
+            	<input type="checkbox" /> <span><?php echo $lang->_("creditcard_15"); ?></span>
+            </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="panel panel-default">
+	    <div class="panel-heading result-head">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#eligibility">
+	          <span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;<?php echo $lang->_("creditcard_9"); ?>
+	        </a>
+	    </div>
+	    <div id="eligibility" class="panel-collapse collapse">
+	      <div class="panel-body">
+	       	<div class="default-text center-text">
+	        	<p><?php echo $lang->_("creditcard_16"); ?></p>
+	        </div>
+	        <div class="result-filter-select">
+	        	<div class="input-group">
+			      <select class="option form-control">
+					  <option value="" selected="selected"><?php echo $lang->_("creditcard_23", array("people" => $this->config->project->people,)); ?></option>
+					  <option>option2</option>
+				  </select>
+			      <span class="input-group-addon">
+			        <i class="fa fa-question-circle"></i>
+			      </span>
+			    </div>
+
+			    <div class="input-group">
+			      <select class="option form-control">
+					  <option value="" selected="selected"><?php echo $lang->_("creditcard_24"); ?></option>
+					  <option>option2</option>
+				  </select>
+			      <span class="input-group-addon">
+			        <i class="fa fa-question-circle"></i>
+			      </span>
+			    </div>
+
+			    <div class="input-group">
+			      <select class="option form-control">
+					  <option value="" selected="selected"><?php echo $lang->_("creditcard_25"); ?></option>
+					  <option>option2</option>
+				  </select>
+			      <span class="input-group-addon">
+			        <i class="fa fa-question-circle"></i>
+			      </span>
+			    </div>
+
+			    <div class="input-group">
+			      <select class="option form-control">
+					  <option value="" selected="selected"><?php echo $lang->_("creditcard_26"); ?></option>
+					  <option>option2</option>
+				  </select>
+			      <span class="input-group-addon">
+			        <i class="fa fa-question-circle"></i>
+			      </span>
+			    </div>
+
+			    <div class="input-group">
+			      <select class="option form-control">
+					  <option value="" selected="selected"><?php echo $lang->_("creditcard_27"); ?></option>
+					  <option>option2</option>
+				  </select>
+			      <span class="input-group-addon">
+			        <i class="fa fa-question-circle"></i>
+			      </span>
+			    </div>
+
+			    <div class="input-group">
+			      <select class="option form-control">
+					  <option value="" selected="selected"><?php echo $lang->_("creditcard_28"); ?></option>
+					  <option>option2</option>
+				  </select>
+			      <span class="input-group-addon">
+			        <i class="fa fa-question-circle"></i>
+			      </span>
+			    </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="panel panel-default">
+	    <div class="panel-heading result-head">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#payment">
+	          <span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;<?php echo $lang->_("creditcard_10"); ?>
+	        </a>
+	    </div>
+	    <div id="payment" class="panel-collapse collapse">
+	      <div class="panel-body">
+	        <div class="">
+            	<input type="checkbox" /> <span>x<?php echo $lang->_("creditcard_17"); ?></span>
+            </div>
+            <div class="">
+            	<input type="checkbox" /> <span><?php echo $lang->_("creditcard_18"); ?></span>
+            </div>
+            <div class="">
+            	<input type="checkbox" /> <span><?php echo $lang->_("creditcard_19"); ?></span>
+            </div>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="panel panel-default">
+	    <div class="panel-heading result-head">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#bank">
+	          <span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;<?php echo $lang->_("creditcard_11"); ?>
+	        </a>
+	    </div>
+	    <div id="bank" class="panel-collapse collapse">
+	      <div class="panel-body">
+	        <div class="">
+            	<input type="checkbox" /> <span><?php echo $lang->_("creditcard_20"); ?></span>
+            </div>
+            <div class="">
+            	<input type="checkbox" /> <span><?php echo $lang->_("creditcard_21"); ?></span>
+            </div>
+            <div class="">
+            	<input type="checkbox" /> <span><?php echo $lang->_("creditcard_22"); ?></span>
+            </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<?php $this->partial("../../../App/Views/widgets/social") ?>
+	<?php $this->partial("../../../App/Views/widgets/newsletter") ?>
+</div>

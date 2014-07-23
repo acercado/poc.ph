@@ -1,0 +1,114 @@
+<div id="cc-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    	<button type="button" class="close" data-dismiss="modal">X</button>
+    	<div class="row">
+    		<div class="col-md-8" style="padding-right: 0;">
+    			<div class="modal-logo">
+    				<img src="<?php echo $this->url->get('assets/img/moneymax-logo.png');?>" alt="<?php echo $this->config->project->name; ?>"/>
+    			</div>
+    			<div class="modal-card row">
+    				<div class="col-md-3 col-sm-3 col-xs-3">
+    					<img src="<?php echo $this->url->get('assets/img/modals/bpi-cc.png');?>" alt=""/>
+    				</div>
+    				<div class="col-md-9 col-sm-9 col-xs-9">
+    					<strong>BPI Gold Mastercard</strong><br/>(The Premium Card)
+    				</div>
+    			</div>
+    			<div class="modal-steps hidden-xs hidden-sm">
+    				<div class="row">
+    					<div class="col-md-4 col-sm-4">Fill up form and submit</div>
+    					<div class="col-md-4 col-sm-4">Enjoy free bank consultation</div>
+    					<div class="col-md-4 col-sm-4">Submit documents to the bank</div>
+    				</div>
+    			</div>
+    			<div class="modal-whyMM hidden-xs hidden-sm">
+    				<h4>Why Choose <?php echo $this->config->project->name; ?>?</h4>
+    				<p><i class="fa fa-check fa-2x"></i> <span>100% Free</span></p>
+    				<p><i class="fa fa-check fa-2x"></i> <span>We guarantee 100% privacy</span></p>
+    				<p><i class="fa fa-check fa-2x"></i> <span>Same or Better Deals than going direct</span></p>
+    			</div>
+    		</div>
+    		<div class="col-md-4">
+    			<div class="modal-form">
+    				<div class="modal-bank-logo">
+    					<img src="<?php echo $this->url->get('assets/img/modals/bpi.png');?>" alt="BPI"/>
+    				</div>
+    				<p>Please input required details so our advisors can contact you.</p>
+    				<form>	
+    					<div class="form-group">
+    						<input type="text" class="form-control" placeholder="Name" />
+    						<input type="text" class="form-control" placeholder="Email Address" />
+    						<input type="text" class="form-control" placeholder="Phone Number" />
+	    				</div>
+    					<div class="modal-privacy"><i class="fa fa-lock fa-lg"></i> We value your privacy and will not share your information without your permission</div>
+    					<button type="button" class="btn btn-warning btn-go" data-toggle="modal" data-dismiss="modal" data-target="#thankyou-modal">Submit</button>
+    					<div class="modal-terms"><input type="checkbox"> Accepting <a href="javascript:void(0);">Terms &amp; Conditions</a></div>
+    				</form>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="row hidden-xs">
+    		<div class="modalFooter">
+    			Have questions? Contact <?php echo $this->config->project->html_name; ?> at <strong><?php echo $this->config->project->phone; ?></strong> <?php echo $this->config->project->office_hours; ?>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="thankyou-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-responsive">
+    <div class="modal-content">
+    	<button type="button" class="close" data-dismiss="modal">X</button>
+    	<div class="row">
+    		<div class="col-md-12 col-sm-12 col-xs-12">
+    			<div class="ty-modal-header">
+    				<img src="<?php echo $this->url->get('assets/img/modals/thankyou-header.jpg');?>" alt="<?php echo $this->config->project->name; ?>" />
+    			</div>
+    			<div class="ty-modal-content">
+	    			<h2>Thanks for using our site!</h2>
+	    			
+	    			<div class="ty-share">
+	    				<p>Share this site with friends and family so they can save money too!</p>
+						<div class="hidden-xs" style="margin-left: 210px;">
+				    		<span class=""><img src="<?php echo $this->url->get('assets/img/modals/share-now.png');?>" alt="Share Now"/></span>
+				    	</div>
+
+						<div class="row ty-social">
+							<div class="col-md-6 col-sm-6 col-xs-6 padding-0">
+					    		<div class="fb-share-button" data-href="<?php echo $this->url->get(ltrim($this->request->getURI(), '/')); ?>" data-type="button_count" data-width="115"></div>
+					    	</div>
+					    	<div class="col-md-6 col-sm-6 col-xs-6 padding-0 ">
+					    		<div class="g-plus" data-action="share" data-annotation="bubble" data-width="115"></div>
+					    	</div>
+						</div>
+	    			</div>
+	    			<div class="row">
+	    				<form>
+    	    				<div class="col-md-2 col-sm-2 hidden-xs"></div>
+    	    				<div class="col-md-3 col-sm-3 hidden-xs">
+    	    					<img class="modal-ebook" src="<?php echo $this->url->get('assets/img/modals/ebook.png');?>"/>
+    	    				</div>
+    		    			<div class="col-md-5 col-sm-5 col-xs-12">
+    			    				<p>Sign up &amp; get a free ebook!</p>
+    			    				<div class="form-group">
+    									<input type="text" class="form-control" id="email" placeholder="Email">
+    								</div>
+    								<div class="form-group">
+    									<button type="button" class="btn btn-warning btn-go" data-dismiss="modal">Sign Up Now</button>
+    								</div>
+    							
+    						</div>
+    						<div class="col-md-2 col-sm-2 hidden-xs"></div>
+						</form>
+	    			</div>
+	    			<div class="ty-terms"> <input type="checkbox"> By submitting, you agree to our <a href="javascript:void(0);">terms &amp; conditions</a></div>
+	    		</div>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</div>

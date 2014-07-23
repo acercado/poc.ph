@@ -1,0 +1,55 @@
+.bRow{
+    background: url("/assets/img/results-divider-horizontal.png") bottom no-repeat;
+    min-height: 151px;    
+    padding-top: 20px;
+}
+
+.product-container .cc-result{
+    border-bottom: 0;
+}
+
+hr.green{
+    border-top: 3px solid #71a943;
+}
+hr.blue{
+    border-top: 3px solid #016d9b;
+}
+.feature-title1{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.feature-title2{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.key-val{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.key-val label{
+    float: left;    
+}
+.key-val p{
+    float: right;
+    width: 65%;
+}
+.key-val .fa{
+    margin-right: 5px;
+}
+.key-val .fa-times{
+    color: red;
+}
+.fa-star.yellow{
+    color: #f8dc00;
+}
+.fa-star.gray{
+    color: #9c9c9c;
+}
+.testimonial{
+    padding: 20px 0;
+}
+.testimony span{
+    font-weight: bold;
+    color: gray;
+}

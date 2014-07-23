@@ -1,0 +1,114 @@
+<?php
+$this->tag->setDoctype(\Phalcon\Tag::HTML5);
+echo $this->tag->getDoctype();
+?>
+<html lang="en">
+<head>
+<?php echo $this->tag->getTitle(); ?>
+
+    
+<title>Error 404 Page Not Found</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="<?php echo $this->url->get('assets/img/favicon.ico'); ?>" rel="shortcut icon" type="image/vnd.microsoft.icon">
+<!-- <link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'> -->
+<style type="text/css">
+
+::selection{ background-color: #E13300; color: white; }
+::moz-selection{ background-color: #E13300; color: white; }
+::webkit-selection{ background-color: #E13300; color: white; }
+
+body {
+	background-color: #fff;
+	margin: 15% auto;
+	width: 40%;
+	font: 13px/20px normal Helvetica, Arial, sans-serif;
+	color: #4F5155;
+}
+
+a {
+	background-color: transparent;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+h1 {
+	color: #444;
+	background-color: transparent;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 0 0 0;
+	padding: 14px 30px 10px 30px;
+}
+
+code {
+	font-family: Consolas, Monaco, Courier New, Courier, monospace;
+	font-size: 12px;
+	background-color: #f9f9f9;
+	border: 1px solid #D0D0D0;
+	color: #002166;
+	display: block;
+	margin: 14px 0 14px 0;
+	padding: 12px 10px 12px 10px;
+}
+
+#container {
+	margin: 10px;
+	border: 1px solid #D0D0D0;
+	position: relative;
+	border-radius: 5px;
+	background-color: #eeeeee;
+	-moz-box-shadow:    inset 0 0 5px #aaaaaa;
+   	-webkit-box-shadow: inset 0 0 5px #aaaaaa;
+   	box-shadow:         inset 0 0 5px #aaaaaa;
+}
+
+p {
+	padding: 0 30px 0 30px;
+	margin-top: 0;
+	font-size: 14px;
+}
+strong.blue{
+	color: #073D86 !important;
+}
+strong.green{
+	color: #2A772E !important;
+}
+img{
+	position: absolute;
+	right: 30px;
+	height: 150px;
+	top: -72px;
+}
+.error-container{
+	position: absolute;
+	font-size: 60px;
+	top:-41px;
+	color: #41A944;
+	padding-left: 30px;
+	width: 100%;
+}
+
+@media(max-width:750px){
+    img{
+    	display: none;
+    }
+    body{
+		width: 80%;
+    }
+}
+</style>
+</head>
+<body>
+	<content>
+        <div id="container">
+		    <img src="<?php echo $this->url->get('assets/img/pose2.png'); ?>" />
+		    <div class="error-container"><?php echo $lang->_("notfound_1"); ?></div>
+		    <p><?php echo $lang->_("notfound_2"); ?></p>
+		</div>
+    </content>
+</body>
+</html>

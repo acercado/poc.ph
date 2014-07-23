@@ -1,0 +1,133 @@
+<div class="col-md-9 col-sm-9 col-xs-12 cc-results result-container">
+    <div class="panel panel-default result-head" style="margin-bottom:0px;">
+        <div class="row panel-body">
+            <div class="col-md-5 col-sm-5 col-xs-9">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 padding-0">
+                        <span class="arrow-down"></span>
+                        <?php echo $lang->_("creditcard_3"); ?>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-5 col-sm-5 hidden-xs">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 padding-0">
+                        <span class="arrow-down sort-cashback"></span>
+                        <?php echo $lang->_("creditcard_4"); ?>
+                    </div>
+                    <div class="col-md-3 col-sm-3 padding-0">
+                        <span class="arrow-down"></span>
+                        <?php echo $lang->_("creditcard_5"); ?>
+                    </div>
+                    <div class="col-md-3 col-sm-3 padding-0">
+                        <span class="arrow-down"></span>
+                        <?php echo $lang->_("creditcard_6"); ?>
+                    </div>
+                    <div class="col-md-3 col-sm-3 padding-0">
+                        <span class="arrow-down"></span>
+                        <?php echo $lang->_("creditcard_7"); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-3">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12  padding-0">
+                        <?php echo $lang->_("common_1"); ?>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <?php  foreach ($products as $key => $value) { ?>
+    <div class="row cc-result">
+        <div class="result-highlight sort-cashback hidden-xs">&nbsp;</div>
+        <div class="highest-featured">
+            Highest Cashback on dining!
+        </div>
+        <div class="col-md-5 col-sm-5 col-xs-9">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 rRow">                                                    
+                    <p class="card-name"><?php echo $value['companyName'].' '. $value['productName']; ?></p>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-5 cc-cards">
+                            <img class="img-responsive" src="<?php echo $value['logo']; ?>" alt="<?php echo $value['companyName'].' '. $value['productName']; ?>"/>
+                            <ul class="list-unstyled lightgrey">
+                                <li><img src="<?php echo $this->url->get('assets/img/cc-card1.png');?>" alt=""/> <span>Octupus Card</span></li>
+                                <li><img src="<?php echo $this->url->get('assets/img/cc-card2.png');?>" alt=""/> <span>valid TaoBao</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-7 card-details lightgrey">
+                            <strong class="concat_char"><?php echo $lang->_("common_23"); ?></strong>
+                            <ul class="list-unstyled">
+                                <?php foreach ($value['keyBenefits'] as $keybenefits) { ?>
+                                    <li><i class="fa fa-check fa-lg"></i><span><?php echo $keybenefits; ?></span></li>
+                                <?php } ?>
+                            </ul>
+                            <?php if(!empty($value['rewards']['rewardsBeware'])){ ?>
+                                <strong class="concat_char"><?php echo $lang->_("common_22"); ?></strong>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa fa-minus fa-lg"></i><span><?php echo $value['rewards']['rewardsBeware']; ?></span></li>
+                                </ul>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="label label-promo lightgrey row">
+                <div class="col-md-1 col-sm-1 col-xs-1 padding-0">
+                    <img src="<?php echo $this->url->get('assets/img/promo.png');?>" />
+                </div>
+                <div class="col-md-10 col-sm-10 col-xs-10 padding-0 center-text concat_char" style="margin-top: 2px;">
+                    <span>Promo: some promo text here</span>
+                </div>
+                <div class="col-md-1 col-sm-1 col-xs-1 padding-0" style="font-size: 20px;">
+                    <i class="fa fa-info-circle"></i>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col-md-5 col-sm-5 hidden-xs">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 rRow padding-0-5">
+                    <p>Up to <em>5.00%</em></p>
+                    <p><a href="" class="more"><i class="fa fa-question-circle"></i><?php echo $lang->_("common_21"); ?></a></p>
+                </div>
+                <div class="col-md-3 col-sm-3 rRow padding-0-5">
+                    <p>1 mile =<br/><em>$6</em></p>
+                    <p><a href="" class="more"><i class="fa fa-question-circle"></i><?php echo $lang->_("common_21"); ?></a></p>
+                </div>
+                <div class="col-md-3 col-sm-3 rRow padding-0-5">
+                    <p>Up to<br/><em>3x</em></p>
+                    <p><a href="" class="more"><i class="fa fa-question-circle"></i><?php echo $lang->_("common_21"); ?></a></p>
+                </div>
+                <div class="col-md-3 col-sm-3 rRow padding-0-5">
+                    <p><em>$0</em <br/>waived for first year*</p>
+                    <p><a href="" class="more"><i class="fa fa-question-circle"></i><?php echo $lang->_("common_21"); ?></a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-3">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 callus">
+                    <button type="button" class="btn btn-warning btn-go" data-toggle="modal" data-target="#cc-modal"><?php echo $lang->_("common_24"); ?> <i class="hidden-xs fa fa-chevron-right"></i></button>
+
+                    <span class="lightgrey" style="font-size: 12px;"><?php echo $lang->_("common_20"); ?></span>
+                    <span class="call-num"><?php echo $this->config->project->phone; ?></span>
+                    <span class="get-card"><a href=""><i class="fa fa-question-circle"></i><?php echo $lang->_("common_19", array('vartical' => 'Cards')); ?></a></span>
+                    <span class="compare lightgrey"><input type="checkbox"><?php echo $lang->_("common_18"); ?></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php } ?>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <a href="javascript:viod(0);"><div class="moreResults"><?php echo $lang->_("common_17", array('vartical' => 'Cards')); ?></div></a>
+        </div>
+    </div>
+</div>

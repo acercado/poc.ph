@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title":"creditcard",
+        "alias":"credit-card",
+        "content":"<p>Endglish creditcard<\/p>",
+        "meta": {
+            "description":"Samlino er Danmarks førende sammenligningsportal - find det bedste bredbånd, kreditkort og lån med vores brugervenlige sammenligningsværktøj!",
+            "keywords":"Sammenlign, forbrugslån, boliglån, andelsboliglån, kreditkort, bredbånd",
+            "image":"pose1.png"
+        }
+    },
+
+    {
+        "id": 2,
+        "title":"Creditcard",
+        "alias":"credit-card-results",
+        "content":"There is no better way to find yourself the perfect card.",
+        "meta": {
+            "description":"Samlino er Danmarks førende sammenligningsportal - find det bedste bredbånd, kreditkort og lån med vores brugervenlige sammenligningsværktøj!",
+            "keywords":"Sammenlign, forbrugslån, boliglån, andelsboliglån, kreditkort, bredbånd",
+            "image":"pose1.png"
+        }
+    },
+
+    {
+        "id":3,
+        "title":"bdo",
+        "alias":"bdo",
+        "content":"<p>bdo<\/p>",
+        "meta":{
+            "description":"Meta description",
+            "keywords":"meta key words for page",
+            "image":"pose1.png"
+        }
+    },
+
+    {
+        "id":4,
+        "title":"bdo-super-card",
+        "alias":"bdo",
+        "product":"super-card",
+        "content":"<p>bdo-super-card<\/p>",
+        "meta":{
+            "description":"Meta description",
+            "keywords":"meta key words for page",
+            "image":"pose1.png"
+        }
+    }
+]

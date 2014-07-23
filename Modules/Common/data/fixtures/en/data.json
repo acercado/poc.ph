@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "alias":"home",
+        "title":"Home Page",
+        "content":"<p>Endlish Høme body content<\/p>",
+        "seo": {
+            "description":"Samlino er Danmarks førende sammenligningsportal - find det bedste bredbånd, kreditkort og lån med vores brugervenlige sammenligningsværktøj!",
+            "keywords":"Sammenlign, forbrugslån, boliglån, andelsboliglån, kreditkort, bredbånd",
+            "image":"pose1.png",
+            "content":"Samlino er Danmarks førende sammenligningsportal - find det bedste bredbånd, kreditkort og lån med vores brugervenlige sammenligningsværktøj!"
+        }
+    },
+    {
+        "id":2,
+        "alias":"about",
+        "title":"AboutUs",
+        "content":"<p>Endlish Terms & Cønditions bødy content<\/p>",
+        "seo":{
+            "description":"Meta description",
+            "keywords":"meta key words for page",
+            "image":"pose1.png",
+            "content":"<p>Endlish Terms & Cønditions bødy content<\/p>"
+        }
+    },
+    {
+        "id":3,
+        "alias":"carrers",
+        "title":"Carrers",
+        "content":"<p>AboutUs Endlish<\/p>",
+        "seo":{
+            "description":"Meta description",
+            "keywords":"meta key words for page",
+            "image":"pose1.png",
+            "content":"<p>AboutUs Endlish<\/p>"
+        }
+    },
+    {
+        "id":4,
+        "alias":"contact",
+        "title":"Contact",
+        "content":"<p>Contact Endlish<\/p>",
+        "seo":{
+            "description":"Meta description",
+            "keywords":"meta key words for page",
+            "image":"pose1.png",
+            "content":"<p>AboutUs Endlish<\/p>"
+        }
+    }
+]

@@ -1,0 +1,16 @@
+{
+    "minimum-stability": "dev",
+    "require": {
+        "filp/whoops": "1.2.*@dev",
+        "nesbot/carbon": "1.*",
+		"swiftmailer/swiftmailer": "@stable",
+        "anahkiasen/underscore-php" : "dev-master",
+        "guzzlehttp/guzzle": "4.*",
+        "illuminate/support": "~4",
+        "patchwork/utf8": "1.1.*"
+
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "1.5.2"
+    }
+}

@@ -1,0 +1,59 @@
+<?php 
+$url = $this->config->project->cms_url . 'footer';
+$cms = json_decode(file_get_contents($url));
+$cms = $cms->data;
+?>
+
+<section class="footer-building">
+
+</section>
+<section class="footer-content">
+    <div class="container sec_grp">
+        <div class="col-md-2 col-sm-3 footer-max hidden-xs">
+            <img src="<?php echo $cms->image->path; ?>" />
+        </div>
+        <div class="col-md-10 col-sm-9 col-xs-6">
+            <?php /*<section class="compare-global">
+                <span>Compare Global</span>
+                <div>
+                    <a href="" class="ctr1"><span>ctr1</span></a>
+                    <a href="" class="ctr2"><span>ctr2</span></a>
+                    <a href="" class="ctr3"><span>ctr3</span></a>
+                    <a href="" class="ctr4"><span>ctr4</span></a>
+                    <a href="" class="ctr5"><span>ctr5</span></a>
+                    <a href="" class="ctr6"><span>ctr6</span></a>
+                    <a href="" class="ctr7"><span>ctr7</span></a>
+                </div>
+            </section> */ ?>
+            <section class="row portal_listings">
+                <?php foreach ($mainMenu as $value) { ?>
+                    <div class="col-md-3 col-sm-3">
+                    <h4><?php echo $value['name']; ?></h4>
+                    <?php if(!empty($value['submenu'])) { ?>
+                    <ul class="list-unstyled">
+                        <?php foreach ($value['submenu'] as $val) { ?>
+                            <li><?php echo $this->tag->linkTo( array(array('for' => $val['for'], 'params' => $val['params'] ), $val['name'], 'onClick' => '_gaq.push(["_trackEvent", "Links", "Click", "Footer '.$val['name'].'"]);' )); ?></li> 
+                        <?php } ?>
+                    </ul> 
+                    <?php } ?>  
+                    </div>                   
+                <?php } ?>
+            </section>
+            <section class="footer-links hidden-xs">
+                <ul>
+                    <?php foreach ($staticMenu as $value) { ?>
+                        <li><?php echo $this->tag->linkTo( array(array('for' => $value['for'] ), $value['name'] )); ?></li>
+                    <?php } ?>
+                </ul>
+            </section>
+        </div>
+    </div>
+</section>
+
+<section class="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            <p>&copy; <?php echo date("Y"); ?> <?php echo $cms->copyright; ?></p>
+        </div>
+    </div>
+</section>

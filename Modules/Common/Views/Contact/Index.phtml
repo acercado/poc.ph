@@ -1,0 +1,7 @@
+<?php $this->flash->output(); ?>
+<form action="<?php echo $this->url->get( ltrim($this->router->getRewriteUri(), '/') ); ?>" class="form-horizontal" method="POST">
+	<p><?php echo $lang->_('common_5'); ?>:	<input type="text" id="name" name="name" value="<?php echo isset($name) ? $name : ''; ?>" placeholder="<?php echo $lang->_('common_5'); ?>" /></p>
+	<p><?php echo $lang->_('common_6'); ?>:	<input type="email" id="email" name="email" value="<?php echo isset($email) ? $email : ''; ?>" placeholder="<?php echo $lang->_('common_6'); ?>" /></p>
+	<p><?php echo $lang->_('common_7'); ?>:	<textarea id="msg" name="msg" placeholder="<?php echo $lang->_('common_7'); ?>"><?php echo isset($msg) ? $msg : ''; ?></textarea></p>
+	<input type="submit" name="send" id="send" value="<?php echo $lang->_('common_8'); ?>">
+</form>

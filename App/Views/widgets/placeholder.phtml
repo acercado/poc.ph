@@ -1,0 +1,152 @@
+<?php 
+$url = $this->config->project->cms_url . 'widgets/placeholder';
+$cms = json_decode(file_get_contents($url));
+$cms = $cms->data;
+?>
+<div class="container sec_grp">
+	<div class="row">
+		<div class="banner">
+			<div class="col-md-6 col-sm-3 hidden-xs latest">
+				<div class="latest-act hidden-sm">
+					<div class="latest-act-feed">
+						<h4>The latest activity:</h4>
+						<ul class="list-unstyled">
+							<li>Mr. A chose <strong>Citibank</strong> Cashback Platinum on May 29</li>
+							<li>Mr. B chose <strong>Citibank</strong> Cashback Platinum on May 28</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-9 hidden-xs padding-0">
+				<div class="search-verticals">
+					<h5 class="verticals-name">Credit Card</h5>
+					<h3>What would you like to do today?</h3>
+					<div class="search-form">
+						<form>			            
+	                        <div class="btn-group">
+							  <button type="button" class="btn btn-success btn1" data-toggle="dropdown">Find the best cards on the market</button>
+							  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+							    <span class="caret"></span>
+							    <span class="sr-only">Toggle Dropdown</span>
+							  </button>
+							  <ul class="dropdown-menu" role="menu">
+
+							    <li><a href="">Transfer an existing balance to a 0% card<br/><span>0% Interest Balance Transfer credit cards.</span></a></li>
+							    <li class="divider"></li>
+							    <li><a href="">Pay no interest on my spending<br/><span>0% Interest Purchase credit cards</span></a></li>
+							    <li class="divider"></li>
+							    <li><a href="">Transfer a balance and pay no interest on spending<br/><span>0% Interest Purchase credit cards</span></a></li>
+							    <li class="divider"></li>
+							    <li><a href="">Build up my credit rating<br/><span>Credit cards to bad credit</span></a></li>
+							    <li class="divider"></li>
+							    <li><a href="">Earn rewards and get cash back on spending<br/><span>Reward, Airline &amp; Cashback</span></a></li>
+							    <li class="divider"></li>
+							    <li><a href="">Spend money overseas<br/><span>Travel credit cards</span></a></li>
+							    <li class="divider"></li>
+							    <li><a href="">Find a low rate card for everyday spending<br/><span>Low interest credit cards</span></a></li>
+							  </ul>
+	 					 		
+							</div>
+							<div class="btn-group">
+								<button type="button" class="btn btn-warning btn-go">Go <i class="fa fa-chevron-right"></i></button>
+							</div>
+							<div class="or">OR</div>
+							<div class="btn-group">
+								<button type="button" class="btn btn-warning btn-find">Find the best card for me <i class="fa fa-chevron-right"></i></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="hidden-lg hidden-md hidden-sm col-xs-12">
+				<h2>Compare Credit Cards</h2>
+				<h4>Ease up your spending by finding the best credit cards.</h4>
+				<div class="search-form">
+					<form>	
+						<div class="row">		        
+		                        <div class="btn-group col-xs-9 padding-0">
+								  <button type="button" style="width:85%" class="btn btn-success btn1" data-toggle="dropdown">Find the best cards on the market</button>
+								  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+								    <span class="caret"></span>
+								    <span class="sr-only">Toggle Dropdown</span>
+								  </button>
+								  <ul class="dropdown-menu" role="menu">
+
+								    <li><a href="">Transfer an existing balance to a 0% card<br/><span>0% Interest Balance Transfer credit cards.</span></a></li>
+								    <li class="divider"></li>
+								    <li><a href="">Pay no interest on my spending<br/><span>0% Interest Purchase credit cards</span></a></li>
+								    <li class="divider"></li>
+								    <li><a href="">Transfer a balance and pay no interest on spending<br/><span>0% Interest Purchase credit cards</span></a></li>
+								    <li class="divider"></li>
+								    <li><a href="">Build up my credit rating<br/><span>Credit cards to bad credit</span></a></li>
+								    <li class="divider"></li>
+								    <li><a href="">Earn rewards and get cash back on spending<br/><span>Reward, Airline &amp; Cashback</span></a></li>
+								    <li class="divider"></li>
+								    <li><a href="">Spend money overseas<br/><span>Travel credit cards</span></a></li>
+								    <li class="divider"></li>
+								    <li><a href="">Find a low rate card for everyday spending<br/><span>Low interest credit cards</span></a></li>
+								  </ul>
+								</div>
+							<div class="btn-group col-xs-3 padding-0">
+								<button type="button" class="btn btn-warning btn-go">Go <i class="fa fa-chevron-right"></i></button>
+							</div>
+						</div>
+						<div class="or">OR</div>
+						<div class="btn-group">
+							<button type="button" class="btn btn-warning btn-find">Find the best card for me <i class="fa fa-chevron-right"></i></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 hidden-sm hidden-xs">
+            <div id="banksSlider" class="banks slide">            
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+	                        <ul>
+	                        	<?php foreach ($cms->bank_slider as $slider) { ?>
+		                            <li><a href="#"><img src="<?php echo $slider->path; ?>" alt="Image" class="img-responsive"></a></li>
+	                        	<?php } ?>
+	                        </ul>
+							<!-- <ul>
+	                            <li><a href="#"><img src="/assets/img/banks/bdo-logo.png" alt="Image" class="img-responsive"></a></li>
+	                            <li><a href="#"><img src="/assets/img/banks/bpi-logo.png" alt="Image" class="img-responsive"></a></li>
+	                            <li><a href="#"><img src="/assets/img/banks/metrobank-logo.png" alt="Image" class="img-responsive"></a></li>
+	                            <li><a href="#"><img src="/assets/img/banks/rcbc-logo.png" alt="Image" class="img-responsive"></a></li>
+	                            <li><a href="#"><img src="/assets/img/banks/pnb-logo.png" alt="Image" class="img-responsive"></a></li>
+	                            <li><a href="#"><img src="/assets/img/banks/citibank-logo.png" alt="Image" class="img-responsive"></a></li>
+	                            <li><a href="#"><img src="/assets/img/banks/hsbc-logo.png" alt="Image" class="img-responsive"></a></li>
+	                        </ul> -->
+	                    </div>
+                    </div>
+                     <div class="item">
+                        <div class="row">
+                        	<ul>
+	                        	<?php foreach ($cms->bank_slider as $slider) { ?>
+		                            <li><a href="#"><img src="<?php echo $slider->path; ?>" alt="Image" class="img-responsive"></a></li>
+	                        	<?php } ?>
+	                        </ul>
+	                        <!-- <ul>
+	                            <li><a href="#"><img src="/assets/img/banks/bdo-logo.png" alt="Image" class="img-responsive"></a></li>
+	                            <li><a href="#"><img src="/assets/img/banks/bpi-logo.png" alt="Image" class="img-responsive"></a></li>
+	                            <li><a href="#"><img src="/assets/img/banks/metrobank-logo.png" alt="Image" class="img-responsive"></a></li>
+	                            <li><a href="#"><img src="/assets/img/banks/rcbc-logo.png" alt="Image" class="img-responsive"></a></li>
+	                            <li><a href="#"><img src="/assets/img/banks/pnb-logo.png" alt="Image" class="img-responsive"></a></li>
+	                            <li><a href="#"><img src="/assets/img/banks/citibank-logo.png" alt="Image" class="img-responsive"></a></li>
+	                            <li><a href="#"><img src="/assets/img/banks/hsbc-logo.png" alt="Image" class="img-responsive"></a></li>
+	                        </ul> -->
+	                    </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#banksSlider" data-slide="prev"><i class="fa fa-chevron-left fa-lg"></i></a>
+
+                <a class="right carousel-control" href="#banksSlider" data-slide="next"><i class="fa fa-chevron-right fa-lg"></i></a>
+            </div>
+            <!--/myCarousel-->
+        </div>
+	</div>
+</div>
+

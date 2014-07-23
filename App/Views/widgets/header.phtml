@@ -1,0 +1,29 @@
+<?php 
+$url = $this->config->project->cms_url . 'header';
+// echo $url; die;
+$cms = json_decode(file_get_contents($url));
+$cms = $cms->data;
+?>
+
+<section class="container sec_grp">
+    <div class="row">
+        <div class="col-md-3 col-sm-7 hidden-xs logo">
+            <a href="<?php echo $this->url->get();?>"><img src="<?php echo $cms->logo->path; ?>" alt="MoneyMax"></a>
+        </div>
+        <ul class="col-md-6 hidden-sm hidden-xs header-text">
+            <li class="ht1"><?php echo $cms->text_1; ?></li>
+            <li class="ht2"><?php echo $cms->text_2; ?></li>
+            <li class="ht3"><?php echo $cms->text_3; ?></li>
+        </ul>
+        <div class="col-md-3 col-sm-5 hidden-xs header-contacts">
+            <div class="col-md-9 col-sm-9 contact-details padding-0" style="padding-right: 8px !important;">
+                <span><?php echo $cms->contact_label; ?></span>
+                <span class="phoneNo"><a href="tel:<?php echo $cms->tel_no; ?>"><?php echo $cms->tel_no; ?></a></span>
+                <span class="time"><?php echo $cms->office_hours; ?></span>
+            </div>
+            <div class="col-md-3 col-sm-3 padding-0">
+                <img src="<?php echo $cms->agent->path; ?>" alt="" />
+            </div>
+        </div>
+    </div>
+</section>

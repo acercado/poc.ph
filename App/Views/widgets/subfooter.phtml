@@ -1,0 +1,59 @@
+<?php 
+$url = $this->config->project->cms_url . 'credit-card/sub-footer';
+$cms = json_decode(file_get_contents($url));
+$cms = $cms->data;
+?>
+
+<section class="subfooter-container hidden-xs">
+    <div class="container sec_grp">
+      <div class="row">
+      	<div class="col-md-8 col-sm-8 col-xs-12">
+              <ul class="nav nav-tabs subfooter-tabs" role="tablist">
+                <li class="active" style="margin-right: 1%;">
+                  <a href="#guide" role="tab" data-toggle="tab"><?php echo $cms->guide_header; ?></a>
+                </li>
+                <li style="margin: 0px 1%;">
+                  <a href="#news" role="tab" data-toggle="tab"><?php echo $cms->news_header; ?></a>
+                </li>
+                <li style="margin-left: 1%;">
+                  <a href="#infographics" role="tab" data-toggle="tab"><?php echo $cms->infographics_header; ?></a>
+                </li>
+              </ul>
+              <div class="tab-content subfooter-content">
+                <div class="tab-pane active" id="guide">
+                  <p><?php echo $cms->guide; ?></p>
+                </div>
+                <div class="tab-pane" id="news">
+                  <p><?php echo $cms->news; ?></p>
+                </div>
+                <div class="tab-pane" id="infographics">
+                  <p><?php echo $cms->infographics; ?></p>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-md-4 col-sm-4">
+            <div class="panel panel-default testimonial-head">
+              <div class="panel-body">
+                <?php echo $cms->header; ?>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-sm-4">
+                  <img class="img-responsive" src="<?php echo $cms->image->path; ?>" />
+
+              </div>
+              <div class="col-md-8 col-sm-8">
+                  <p class="justify"><?php echo $cms->testimonial; ?></p>
+                  <p class="testimonial-name"><?php echo $cms->name; ?></p>
+              </div>
+            </div>
+            <div class="center-text">
+                <a href="javascript:void(0);" class="testimonial-link"><?php echo $lang->_("subfooter_4"); ?></a>
+            </div>
+          	
+          </div>
+      </div>
+  </div>
+</div>
+
